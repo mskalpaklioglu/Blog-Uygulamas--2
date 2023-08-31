@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <div style="display: flex; justify-content: center;">
+    <h1>Yazıyı Güncelle</h1>
+  </div>
+  <form [formGroup]="form" style="min-width: 350px;">
+    <div class="container">
+      <div class="row">
+        <mat-form-field>
+          <mat-label>Blog Başlığı</mat-label>
+          <input matInput formControlName="title">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <mat-label>Blog İçeriği</mat-label>
+          <textarea matInput formControlName="body" cols="40" rows="10"></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <button [disabled]="!form.valid" mat-raised-button color="primary" (click)="onSubmit()">Güncelle</button>
+    </div>
+
+  </form>
+</div>
